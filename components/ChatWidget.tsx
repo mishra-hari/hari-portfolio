@@ -109,7 +109,12 @@ export default function ChatWidget() {
       {/* Badge */}
       {!open && (
         <div className="fixed bottom-[82px] right-6 z-50 bg-card border border-border rounded-full px-3 py-1 text-xs text-zinc-400 shadow-md pointer-events-none">
-          Ask me anything ✨
+          Let's talk
+          <img
+            src="/profile_pic.png"
+            alt="Hari"
+            className="inline-block w-5 h-5 rounded-full object-cover object-top border border-accent/40 ml-1 align-middle"
+          />
         </div>
       )}
 
@@ -118,9 +123,11 @@ export default function ChatWidget() {
         <div className="fixed bottom-24 right-6 z-50 w-80 sm:w-96 rounded-2xl border border-border bg-card shadow-2xl flex flex-col overflow-hidden chat-bubble">
           {/* Header */}
           <div className="flex items-center gap-3 px-4 py-3 border-b border-border bg-subtle">
-            <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-sm">🤖</div>
+            <div className="w-8 h-8 rounded-full overflow-hidden border border-accent/40">
+              <img src="/chat_profile.png" alt="Hari AI" className="w-full h-full object-cover" />
+            </div>
             <div>
-              <div className="text-sm font-medium text-white">Hari's AI</div>
+              <div className="text-sm font-medium text-white">Babban</div>
               <div className="text-xs text-muted flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400"/>
                 Online
