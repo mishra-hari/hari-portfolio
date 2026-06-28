@@ -61,20 +61,22 @@ export default async function Image() {
           </div>
         </div>
 
-        {/* Right: profile photo */}
         <div style={{
-          width: 220,
-          height: 220,
-          borderRadius: '50%',
-          overflow: 'hidden',
-          border: '3px solid #6366f1',
-          marginLeft: 60,
-          display: 'flex',
-        }}>
-          <img
-            src="https://harimishra.com/profile.jpg"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          />
+            width: 220,
+            height: 220,
+            borderRadius: '50%',
+            border: '3px solid #6366f1',
+            marginLeft: 60,
+            background: '#1e1e2e',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: 72,
+            fontWeight: 700,
+            color: '#818cf8',
+            letterSpacing: -2,
+            }}>
+            HM
         </div>
       </div>
     ),
