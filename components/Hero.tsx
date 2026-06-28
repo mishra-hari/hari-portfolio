@@ -58,7 +58,7 @@ export default function Hero() {
               Available for new opportunities
             </div>
 
-            <h1 className="animate-fade-up delay-100 text-4xl md:text-5xl font-bold leading-tight mb-2">
+            <h1 className="animate-fade-up delay-100 text-4xl md:text-4xl font-bold leading-tight mb-2">
               {profile.shortName}
             </h1>
 

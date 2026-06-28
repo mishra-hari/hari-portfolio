@@ -28,12 +28,24 @@ export default function Navbar() {
     >
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a
+        <a href="#" className="flex items-center gap-2.5 group">
+          <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-accent/40 group-hover:border-accent transition-colors">
+            <img
+              src="/profile_pic.png"
+              alt="Hari Mishra"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <span className="font-mono text-md text-accent-soft tracking-widest uppercase hover:text-white transition-colors">
+            Hari Prapanna Mishra
+          </span>
+        </a>
+        {/* <a
           href="#"
           className="font-mono text-sm text-accent-soft tracking-widest uppercase hover:text-white transition-colors"
         >
           hari<span className="text-muted">.</span>dev
-        </a>
+        </a> */}
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
