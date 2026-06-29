@@ -44,15 +44,15 @@ export default function Projects() {
                   <div className="mb-3">
                     <div className="text-xs text-muted mb-1.5 uppercase tracking-wide">Key features</div>
                     <ul className="space-y-0.5">
-                      {project.features.slice(0, 3).map((f, j) => (
+                      {project.features.slice(0, 4).map((f, j) => (
                         <li key={j} className="text-xs text-zinc-500 flex gap-1.5">
                           <span className="text-accent mt-0.5">▸</span>
                           {f}
                         </li>
                       ))}
-                      {project.features.length > 3 && (
+                      {/* {project.features.length > 3 && (
                         <li className="text-xs text-muted">+{project.features.length - 3} more</li>
-                      )}
+                      )} */}
                     </ul>
                   </div>
 

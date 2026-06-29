@@ -1,5 +1,6 @@
 export const profile = {
   name: "Hari Prapanna Mishra",
+  highLights: "Available for new opportunities",
   shortName: "Hari Mishra",
   title: "Associate Manager & Frontend Architect",
   tagline: "11+ years building enterprise-scale web applications",
@@ -7,12 +8,14 @@ export const profile = {
   email: "hari.mishra.in@gmail.com",
   phone: "+91 8319245456",
   links: {
-    linkedin: "https://www.linkedin.com/in/harimishra",
+    linkedin: "https://www.linkedin.com/in/hari-mishra",
     github: "https://github.com/harimishra",
     patent: "https://patents.google.com/patent/US12210855B2",
   },
   summary:
   "Associate Manager with 11+ years of progressive experience in enterprise front-end development and technical leadership. Proven track record of leading cross-functional engineering teams, driving architectural decisions, and delivering scalable web applications across financial services, telecom, media, and marketing analytics domains. Experienced in building and mentoring high-performing teams, translating complex business requirements into clean technical solutions, and managing end-to-end delivery in agile environments. Actively integrating AI into day-to-day development workflows to enhance productivity, code quality, and innovation.",
+
+  workStatus: "Available to join immediately. Notice period: 0 days.",
 
   experience: [
     {
@@ -169,16 +172,17 @@ export const profile = {
     "Frontend Core": [
       "JavaScript",
       "TypeScript",
+      "Web Components",
       "HTML5",
       "CSS3 / SASS",
-      "Next.js",
-      "React.js",
     ],
     "Frameworks & Libraries": [
-      "Angular (9+)",
+      "Angular (16+)",
+      "Next.js",
+      "React.js",
       "Lit",
-      "Web Components",
       "RxJS",
+      "Redux Toolkit",
       "Angular Material",
       "Bootstrap",
       "Tailwind CSS",

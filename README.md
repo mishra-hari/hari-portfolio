@@ -16,7 +16,7 @@ A modern, AI-enabled personal portfolio built with Next.js 14, TypeScript, Tailw
 ### 1. Clone & install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/hari-portfolio.git
+git clone https://github.com/mishra-hari/hari-portfolio
 cd hari-portfolio
 npm install
 ```
@@ -101,6 +101,23 @@ hari-portfolio/
 └── vercel.json             # Vercel config
 ```
 
+## Directory & File Importance
+app/ — The Brain (Next.js App Router)
+This is a Next.js convention — the framework looks for this folder automatically. You cannot rename it.
+
+```
+app/
+├── layout.tsx       ← REQUIRED by Next.js — wraps every page, fonts, metadata
+├── page.tsx         ← REQUIRED by Next.js — this IS your homepage (harimishra.com/)
+├── globals.css      ← imported in layout.tsx — can rename but update the import
+└── api/
+    └── chat/
+        └── route.ts ← REQUIRED naming — Next.js sees /api/chat/ folder = API endpoint
+                        accessible at harimishra.com/api/chat
+                        changing folder name changes the URL
+
+```
+
 ## 🛠 Customisation
 
 ### Update your data
@@ -131,3 +148,37 @@ Edit `lib/profile.ts` — this is the single source of truth for all content AND
 | AI | Claude via `@anthropic-ai/sdk` |
 | Streaming | Edge Runtime + SSE |
 | Hosting | Vercel |
+
+
+## Working flow
+
+Browser hits harimishra.com
+        ↓
+Vercel serves your Next.js app
+        ↓
+Next.js reads app/layout.tsx
+  → sets fonts, metadata, og:image tags
+  → wraps everything in <html><body>
+        ↓
+Next.js renders app/page.tsx
+  → imports and renders components in order:
+     <Navbar/>        reads nothing, pure UI
+     <Hero/>          reads profile.ts → name, title, stats
+     <Experience/>    reads profile.ts → jobs list
+     <Projects/>      reads profile.ts → projects list
+     <Skills/>        reads profile.ts → skills object
+     <Contact/>       reads profile.ts → email, links
+     <ChatWidget/>    reads nothing at load — waits for user input
+        ↓
+Page is fully rendered and sent to browser
+        ↓
+User types in ChatWidget and hits send
+        ↓
+ChatWidget sends POST to /api/chat
+        ↓
+app/api/chat/route.ts receives it
+  → reads profile.ts → builds system prompt
+  → calls Anthropic API with user message
+  → streams response back to ChatWidget
+        ↓
+ChatWidget renders streaming reply word by word

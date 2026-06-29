@@ -55,7 +55,7 @@ export default function Hero() {
             {/* Badge */}
             <div className="animate-fade-up inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full border border-accent/30 bg-accent/5 text-xs font-mono text-accent-soft">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse-slow"/>
-              Available for new opportunities
+              {profile.highLights}
             </div>
 
             <h1 className="animate-fade-up delay-100 text-4xl md:text-4xl font-bold leading-tight mb-2">
