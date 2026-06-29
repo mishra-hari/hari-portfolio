@@ -11,6 +11,7 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/hari-mishra",
     github: "https://github.com/harimishra",
     patent: "https://patents.google.com/patent/US12210855B2",
+    portfolio: "https://harimishra.com",
   },
   summary:
   "Associate Manager with 11+ years of progressive experience in enterprise front-end development and technical leadership. Proven track record of leading cross-functional engineering teams, driving architectural decisions, and delivering scalable web applications across financial services, telecom, media, and marketing analytics domains. Experienced in building and mentoring high-performing teams, translating complex business requirements into clean technical solutions, and managing end-to-end delivery in agile environments. Actively integrating AI into day-to-day development workflows to enhance productivity, code quality, and innovation.",
@@ -19,67 +20,61 @@ export const profile = {
 
   experience: [
     {
-      company: "Omnicom Global Solutions (OGS)",
-      location: "Pune, India",
-      role: "Associate Manager — Frontend Team Lead",
-      period: "Apr 2026 – Present",
-      duration: "3+ months",
-      highlights: [
-        "Lead and mentor front-end development team, providing technical guidance and career development.",
-        "Conduct technical feasibility assessments and define architectural decisions for complex analytics platforms.",
-        "Collaborate with project owners and stakeholders to translate requirements into technical specifications.",
-        "Manage end-to-end project development lifecycle from planning through deployment.",
-        "Lead development of next-generation marketing analytics and activation suite (Omni Customization Track).",
-      ],
+      "company": "Omnicom Global Solutions (OGS)",
+      "location": "Pune, India",
+      "roles": [
+        {
+          "title": "Associate Manager",
+          "period": "Apr 2026 – Present",
+          "duration": "3 mos",
+          "highlights": [
+            "Lead and mentor a cross-functional front-end development team, driving technical governance and career growth paths.",
+            "Conduct technical feasibility assessments and spearhead architectural blueprints for high-scale marketing analytics platforms.",
+            "Collaborate with product owners and global stakeholders to translate business requirements into technical design specifications.",
+            "Orchestrate the end-to-end software development lifecycle (SDLC) from structural planning through global production deployment.",
+            "Direct the engineering of the next-generation analytics and activation engine (Omni Customization Track)."
+          ]
+        },
+        {
+          "title": "Engineering Lead",
+          "period": "Dec 2022 – Mar 2026",
+          "duration": "3 yrs 3 mos",
+          "highlights": [
+            "Architected and deployed high-performance UI ecosystems leveraging modern Web Components via Lit, Vite, and strict TypeScript.",
+            "Pioneered enterprise-wide adoption of next-gen frontend tooling, atomic configurations, and component-driven architecture.",
+            "Led the end-to-end development of GeoLift Planner, an advanced geo-based experimentation platform utilizing synthetic control generation.",
+            "Established a unified, shared component registry yielding 95%+ cross-platform code reusability and minimizing technical debt."
+          ]
+        }
+      ]
     },
     {
-      company: "Omnicom Global Solutions (OGS)",
-      location: "Pune, India",
-      role: "Engineering Lead",
-      period: "Dec 2022 – Mar 2026",
-      duration: "3 yrs 4 mos",
-      highlights: [
-        "Architected and developed modern Web Components using Lit and Vite for high-performance UIs.",
-        "Pioneered adoption of next-generation frontend tooling and component-based architecture.",
-        "Led development of GeoLift Planner — advanced geo-based lift experiments platform with synthetic control generation.",
-        "Implemented reusable component libraries with 95%+ code reusability across platform.",
-      ],
-    },
-    {
-      company: "Rakuten Symphony",
-      location: "Indore, Madhya Pradesh, India",
-      role: "Technical Lead",
-      period: "Sep 2022 – Dec 2022",
-      duration: "4 mos",
-      highlights: [
-        "Led technical strategy and architectural decisions for enterprise-scale platforms.",
-        "Mentored senior engineers and established best practices for code quality and performance.",
-      ],
-    },
-    {
-      company: "Rakuten Symphony",
-      location: "Indore, Madhya Pradesh, India",
-      role: "Module Lead",
-      period: "Jul 2020 – Sep 2022",
-      duration: "2 yrs 2 mos",
-      highlights: [
-        "Managed development of complex business modules serving 50,000+ active users.",
-        "Coordinated cross-functional teams and ensured on-time delivery of features.",
-      ],
-    },
-    {
-      company: "Rakuten Symphony",
-      location: "Indore, Madhya Pradesh, India",
-      role: "Senior Software Engineer",
-      period: "Feb 2015 – Jul 2020",
-      duration: "5 yrs 5 mos",
-      highlights: [
-        "Developed full-featured web applications using Angular and JavaScript frameworks.",
-        "Implemented responsive UI designs and optimized application performance.",
-        "Collaborated with backend teams on RESTful API integration and data visualization.",
-      ],
-    },
-  ],
+      "company": "Rakuten Symphony",
+      "location": "Indore, Madhya Pradesh, India",
+      "roles": [
+        {
+          "title": "Technical Lead",
+          "period": "Jul 2020 – Dec 2022",
+          "duration": "2 yrs 5 mos",
+          "highlights": [
+            "Formulated frontend technical strategy, structural migration plans, and core architectural decisions for enterprise-scale platforms.",
+            "Mentored senior software engineers, established rigid code review gates, and optimized client-side performance standards.",
+            "Coordinated multi-disciplinary agile squads to guarantee reliable, on-time delivery of feature roadmaps."
+          ]
+        },
+        {
+          "title": "Senior Software Engineer",
+          "period": "Feb 2015 – Jul 2020",
+          "duration": "5 yrs 5 mos",
+          "highlights": [
+            "Engineered full-featured single-page web applications utilizing robust Angular ecosystems and core modern JavaScript.",
+            "Built highly responsive web layouts and systematically optimized browser rendering pipelines to improve performance metrics.",
+            "Collaborated directly with downstream engineering groups on RESTful API contracts, data orchestration, and deep state visualization."
+          ]
+        }
+      ]
+    }
+],
 
   projects: [
     {
@@ -169,83 +164,78 @@ export const profile = {
   ],
 
   skills: {
-    "Frontend Core": [
-      "JavaScript",
-      "TypeScript",
-      "Web Components",
-      "HTML5",
-      "CSS3 / SASS",
+    "Frontend Architecture & Patterns": [
+      "Micro Frontends",
+      "Module Federation",
+      "Single-SPA",
+      "Monorepos (Nx, Turborepo)",
+      "State Management (RxJS, Redux Toolkit, Signals)",
+      "Modern Design Patterns (Component-Driven, Atomic, MVC)"
     ],
     "Frameworks & Libraries": [
       "Angular (16+)",
-      "Next.js",
       "React.js",
-      "Lit",
-      "RxJS",
-      "Redux Toolkit",
-      "Angular Material",
-      "Bootstrap",
+      "Next.js",
+      "Lit / Web Components",
       "Tailwind CSS",
+      "Angular Material & Headless UI Components"
     ],
-    "Architecture & Patterns": [
-      "Micro Frontend",
-      "Module Federation",
-      "Single-SPA",
-      "Mono-Repo (NX)",
-      "MVC / SPA",
-      "Modern Design Patterns",
-      "REST API Integration",
+    "Frontend Core & Engineering": [
+      "TypeScript (Strict Mode)",
+      "JavaScript (ESNext)",
+      "HTML5 & Semantic Web",
+      "CSS3 / SASS / CSS Modules",
+      "Web Accessibility (WCAG 2.2, ARIA)"
     ],
-    "Build & Tooling": [
+    "Performance & Core Web Vitals": [
+      "Performance Optimization (LCP, INP, CLS)",
+      "Code Splitting & Lazy Loading Strategy",
+      "Server-Side Rendering (SSR) & Static Site Generation (SSG)",
+      "Edge Caching & Dynamic Asset Optimization",
+      "Storybook & Visual Regression Testing"
+    ],
+    "Security Essentials": [
+      "Content Security Policies (CSP)",
+      "Input Validation & Schema Enforcement (Zod)",
+      "XSS Mitigation & Sanitization (DOMPurify)",
+      "Secure Auth Lifecycles (HttpOnly Cookies, JWT Token Management)"
+    ],
+    "Testing & Quality Automation": [
+      "Unit Testing (Vitest, Jest)",
+      "End-to-End (E2E) Testing (Playwright, Cypress)",
+      "Static Application Security Testing (SonarQube, ESLint)",
+      "Code Quality & Git Hooks (Prettier, Husky, Commitlint)",
+      "Software Composition Analysis (Dependabot)"
+    ],
+    "Build, Tooling & Orchestration": [
       "Vite",
       "Webpack",
       "Rollup",
-      "NPM",
-      "Angular CLI",
-      "Gulp",
-      "Compodoc",
+      "Package Managers (NPM, PNPM, Yarn)",
+      "BFF / Node.js Mocking / REST & GraphQL Integration"
     ],
-    "Agentic AI & LLM": [
-      "Claude AI SDK",
-      "Agentic AI Explorer",
-      "AI-Assisted Development",
-      "GitHub Copilot",
-      "Claude Code",
-      "Prompt Engineering",
+    "Agentic AI & Engineering Systems": [
+      "Claude AI SDK & Claude Code",
+      "GitHub Copilot & AI-Assisted Development",
+      "Agentic AI Workflow Design",
+      "Advanced Prompt Engineering for Software Delivery"
     ],
-    "Cloud & Infrastructure": [
-      "AWS S3",
-      "AWS CloudFront",
-      "AWS Lambda",
-      "Serverless Architecture",
+    "Cloud & DevOps Infrastructure": [
+      "AWS Ecosystem (S3, CloudFront, Lambda, Route 53)",
+      "Serverless & Edge Architectures",
+      "CI/CD Pipeline Automation (GitHub Actions, GitLab CI, Bitbucket Pipelines)",
+      "Infrastructure as Code (Basic CloudFormation/Terraform)"
     ],
-    "Testing & Quality": [
-      "Vitest",
-      "Jest",
-      "Karma",
-      "SonarQube",
-      "Dependabot",
-      "Unit Testing",
-      "Code Scanning",
-    ],
-    "Performance & Design": [
-      "Performance Optimization",
-      "App Enhancement Techniques",
-      "Storybook",
-      "Responsive Design",
-    ],
-    "Languages (Basic)": [
+    "Polyglot Backend Foundations": [
       "Python",
-      "Java",
+      "Java"
     ],
-    "Collaboration": [
-      "Git",
-      "Bitbucket",
-      "Jira",
-      "SVN",
-      "Code Reviews",
-      "Agile / Waterfall",
-    ],
+    "Leadership & Engineering Delivery": [
+      "Technical Governance & Architectural Reviews",
+      "Advanced Code Reviews & Quality Gates",
+      "Distributed Git Workflows & Branching Strategies (Git, Bitbucket)",
+      "Agile Methodologies (Scrum / Kanban via Jira)"
+    ]
   },
 
   education: {

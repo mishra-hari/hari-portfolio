@@ -140,8 +140,8 @@ export default function Hero() {
                 <TermOut text="> 🏆 og-star-q3-2025" delay={1700}/>
                 <TermOut text="> 🏆 og-star-q4-2025" delay={1900}/>
                 <TermLine prompt="$" cmd="cat stack.json | head" delay={2200}/>
-                <TermOut text='> ["Angular", "React", "Lit",' delay={2500}/>
-                <TermOut text='    "Micro Frontend", "NX"]' delay={2600}/>
+                <TermOut text='> ["Angular", "React", "Next.js",' delay={2500}/>
+                <TermOut text='    "Micro Frontend", "Mono-repo"]' delay={2600}/>
                 <TermLine prompt="$" cmd="_" delay={2800}/>
               </div>
             </div>

@@ -223,7 +223,7 @@ export async function GET(req: NextRequest) {
         <Divider />
 
         {/* ── PROFESSIONAL EXPERIENCE ── */}
-        <Section title="Professional Experience">
+        {/* <Section title="Professional Experience">
           {profile.experience.map((job, i) => (
             <View key={i} style={i > 0 ? styles.jobSpacing : {}}>
               <View style={styles.rowJustifyBetween}>
@@ -245,7 +245,7 @@ export async function GET(req: NextRequest) {
               </View>
             </View>
           ))}
-        </Section>
+        </Section> */}
 
         <Divider />
 

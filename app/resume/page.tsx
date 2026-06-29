@@ -42,13 +42,15 @@ export default function ResumePage() {
 
           {/* Contact row */}
           <div className="flex items-center justify-center flex-wrap gap-x-1 mt-2 text-[12px] text-[#4a4a4a]">
+            <span>{profile.location}</span>
+            <span className="mx-1">•</span>
             <span>{profile.email}</span>
             <span className="mx-1">•</span>
             <span>{profile.phone}</span>
             <span className="mx-1">•</span>
-            <span>{profile.links.linkedin}</span>
+            <span>{profile.links.portfolio}</span>
             <span className="mx-1">•</span>
-            <span>{profile.location}</span>
+            <span className="font-semibold text-emerald-700">Available Immediately</span>
           </div>
         </div>
 
@@ -77,26 +79,45 @@ export default function ResumePage() {
 
         {/* ── PROFESSIONAL EXPERIENCE ── */}
         <Section title="Professional Experience">
-          {profile.experience.map((job, i) => (
+          {profile.experience.map((companyBlock, i) => (
             <div key={i} className={i > 0 ? 'mt-4' : ''}>
-              {/* Company + period */}
-              <div className="flex justify-between items-baseline">
-                <span className="font-semibold text-[13px]">{job.company}</span>
-                <span className="text-[11.5px] text-gray-500 italic">{job.period} ({job.duration})</span>
+              
+              {/* Parent Company Metadata Header Block */}
+              <div className="flex justify-between items-baseline border-b border-gray-100 pb-0.5 mb-1.5">
+                <span className="font-bold text-[13.5px] uppercase tracking-wide text-[#333333]">
+                  {companyBlock.company}
+                </span>
+                <span className="text-[11.5px] text-gray-500 font-medium">
+                  {companyBlock.location}
+                </span>
               </div>
-              {/* Role + location */}
-              <div className="flex justify-between items-baseline">
-                <span className="font-semibold text-[12.5px] italic">{job.role}</span>
-                <span className="text-[11.5px] text-gray-500">{job.location}</span>
-              </div>
-              {/* Highlights */}
-              <ul className="mt-1 space-y-0.5 ml-3">
-                {job.highlights.map((h, j) => (
-                  <li key={j} className="text-[12px] relative pl-3 before:content-['•'] before:absolute before:left-0">
-                    {h}
-                  </li>
+
+              {/* Nested Iteration for Multiple Internal Roles */}
+              <div className="space-y-3">
+                {companyBlock.roles.map((role, j) => (
+                  <div key={j} className="pl-1">
+                    {/* Role Title + Runtime Periods */}
+                    <div className="flex justify-between items-baseline">
+                      <span className="font-semibold text-[12.5px] text-gray-800 italic">
+                        {role.title}
+                      </span>
+                      <span className="text-[11.5px] text-gray-500 italic shrink-0">
+                        {role.period} ({role.duration})
+                      </span>
+                    </div>
+
+                    {/* Bullet Highlights */}
+                    <ul className="mt-1 space-y-0.5 ml-3">
+                      {role.highlights.map((h, k) => (
+                        <li key={k} className="text-[12px] relative pl-3 before:content-['•'] before:absolute before:left-0 text-gray-600 leading-relaxed">
+                          {h}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
+
             </div>
           ))}
         </Section>
