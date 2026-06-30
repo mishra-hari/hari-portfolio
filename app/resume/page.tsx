@@ -202,7 +202,6 @@ export default function ResumePage() {
                 }
                 #resume {
                 box-shadow: none !important;
-                padding-top: 0px !important;
                 padding-bottom: 0px !important;
                 }
             }
