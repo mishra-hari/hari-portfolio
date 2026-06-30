@@ -34,80 +34,75 @@ export default function ResumePage() {
       >
 
         {/* ── HEADER ── */}
-        <div className="text-center mb-4">
+        <div className="text-center mb-5">
           <h1 className="text-[22px] font-semibold tracking-wide uppercase text-[#4a4a4a]">
             {profile.name}
           </h1>
-          <p className="text-[13px] text-[#4a4a4a] mt-0.5">{profile.title}</p>
 
-          {/* Contact row */}
-          <div className="flex items-center justify-center flex-wrap gap-x-1 mt-2 text-[12px] text-[#4a4a4a]">
+          {/* Contact row with immediate joiner signal */}
+          <div className="flex items-center justify-center flex-wrap gap-y-1 mt-2 text-[12px] text-[#4a4a4a]">
             <span>{profile.location}</span>
-            <span className="mx-1">•</span>
+            <span className="mx-1.5 text-gray-300">•</span>
             <span>{profile.email}</span>
-            <span className="mx-1">•</span>
+            <span className="mx-1.5 text-gray-300">•</span>
             <span>{profile.phone}</span>
-            <span className="mx-1">•</span>
+            <span className="mx-1.5 text-gray-300">•</span>
             <span>{profile.links.portfolio}</span>
-            <span className="mx-1">•</span>
-            <span className="font-semibold text-emerald-700">Available Immediately</span>
+            <span className="mx-1.5 text-gray-300">•</span>
+            <span className="font-bold text-emerald-700 font-mono uppercase tracking-wider text-[11px]">
+              Available Immediately
+            </span>
           </div>
         </div>
 
-        <Divider />
-
         {/* ── PROFESSIONAL SUMMARY ── */}
         <Section title="Professional Summary">
-          <p className="text-[12.5px] leading-relaxed">{profile.summary}</p>
+          <p className="text-[12.5px] leading-relaxed text-gray-600">{profile.summary}</p>
         </Section>
 
-        <Divider />
-
-        {/* ── CORE COMPETENCIES ── */}
+        {/* ── CORE COMPETENCIES (ATS Flat Stack Optimization) ── */}
         <Section title="Core Competencies">
-          <div className="grid grid-cols-2 gap-x-8 gap-y-1">
+          <div className="space-y-0.5">
             {Object.entries(profile.skills).map(([cat, items]) => (
-              <div key={cat} className="text-[12px]">
-                <span className="font-semibold">{cat}: </span>
-                <span className="text-[#4a4a4a]">{items.join(', ')}</span>
+              <div key={cat} className="text-[12px] leading-relaxed text-gray-600">
+                <span className="font-bold text-gray-800">{cat}: </span>
+                <span>{items.join(', ')}</span>
               </div>
             ))}
           </div>
         </Section>
-
-        <Divider />
 
         {/* ── PROFESSIONAL EXPERIENCE ── */}
         <Section title="Professional Experience">
           {profile.experience.map((companyBlock, i) => (
             <div key={i} className={i > 0 ? 'mt-4' : ''}>
               
-              {/* Parent Company Metadata Header Block */}
-              <div className="flex justify-between items-baseline border-b border-gray-100 pb-0.5 mb-1.5">
-                <span className="font-bold text-[13.5px] uppercase tracking-wide text-[#333333]">
+              {/* Parent Company Metadata Header Row */}
+              <div className="flex justify-between items-baseline mb-1">
+                <span className="font-bold text-[11.5px] tracking-wide text-gray-900 uppercase">
                   {companyBlock.company}
                 </span>
-                <span className="text-[11.5px] text-gray-500 font-medium">
-                  {companyBlock.location}
+                <span className="text-[11.5px] text-gray-500 font-medium font-mono">
+                  📍 {companyBlock.location}
                 </span>
               </div>
 
-              {/* Nested Iteration for Multiple Internal Roles */}
+              {/* Nested Iteration for Promoted Roles */}
               <div className="space-y-3">
                 {companyBlock.roles.map((role, j) => (
-                  <div key={j} className="pl-1">
+                  <div key={j} className="pl-0.5">
                     {/* Role Title + Runtime Periods */}
-                    <div className="flex justify-between items-baseline">
+                    <div className="flex justify-between items-baseline mb-1">
                       <span className="font-semibold text-[12.5px] text-gray-800 italic">
                         {role.title}
                       </span>
-                      <span className="text-[11.5px] text-gray-500 italic shrink-0">
+                      <span className="text-[11.5px] text-gray-500 italic shrink-0 font-mono">
                         {role.period} ({role.duration})
                       </span>
                     </div>
 
                     {/* Bullet Highlights */}
-                    <ul className="mt-1 space-y-0.5 ml-3">
+                    <ul className="space-y-1 ml-3">
                       {role.highlights.map((h, k) => (
                         <li key={k} className="text-[12px] relative pl-3 before:content-['•'] before:absolute before:left-0 text-gray-600 leading-relaxed">
                           {h}
@@ -122,69 +117,69 @@ export default function ResumePage() {
           ))}
         </Section>
 
-        <Divider />
-
-        {/* ── KEY PROJECTS ── */}
+        {/* ── KEY PROJECTS (Streamlined Top 4) ── */}
         <Section title="Key Projects">
-          {profile.projects.map((project, i) => (
-            <div key={i} className={`${i > 0 ? 'mt-3' : ''}`}>
-              <p className="text-[12.5px]">
-                <span className="font-semibold">{project.name}</span>
-                <span className="text-gray-400 text-[11px] ml-2">({project.category})</span>
-                {' — '}
-                <span>{project.description}</span>
+          {profile.projects.map((project, i) => project.showOnResume && (
+            <div key={i} className={i > 0 ? 'mt-3.5' : ''}>
+              <div className="flex justify-between items-baseline mb-0.5">
+                <span className="font-bold text-[12.5px] text-gray-800">{project.name}</span>
+                <span className="text-gray-400 text-[10.5px] font-mono uppercase tracking-wider">
+                  [{project.category}]
+                </span>
+              </div>
+              <p className="text-[12px] text-gray-600 leading-relaxed">
+                {project.description}
               </p>
-              <p className="text-[11.5px] text-gray-500 mt-0.5">
-                <span className="font-medium">Tech: </span>{project.tech.join(', ')}
+              <p className="text-[11.5px] text-gray-500 mt-1">
+                <span className="font-semibold text-gray-700">Tech Stack:</span> {project.tech.join(', ')}
                 {' · '}
-                <span className="italic">{project.role}</span>
+                <span className="italic font-medium text-gray-600">{project.role}</span>
               </p>
             </div>
           ))}
         </Section>
 
-        <Divider />
-
         {/* ── EDUCATION ── */}
         <Section title="Education">
           <div className="flex justify-between items-baseline">
-            <span className="font-semibold">{profile.education.institution}</span>
-            <span className="text-[11.5px] italic text-gray-500">{profile.education.period}</span>
+            <span className="font-semibold text-gray-800">{profile.education.institution}</span>
+            <span className="text-[11.5px] italic text-gray-500 font-mono">{profile.education.period}</span>
           </div>
-          <p className="text-[12px]">
+          <p className="text-[12px] text-gray-600 mt-0.5">
             {profile.education.degree} · {profile.education.affiliation}
           </p>
         </Section>
 
-        <Divider />
-
         {/* ── PATENTS & ACHIEVEMENTS ── */}
         <Section title="Patents & Achievements">
-          <ul className="space-y-1 ml-3">
-            <li className="text-[12px] relative pl-3 before:content-['•'] before:absolute before:left-0">
-              <span className="font-semibold">Patent (Issued): </span>
-              {profile.patent.title}
-              <ul className="ml-4 mt-0.5 space-y-0.5">
-                <li className="text-[11.5px] text-gray-600">Application No.: {profile.patent.applicationNo}</li>
-                <li className="text-[11.5px] text-gray-600">Publication No.: {profile.patent.publicationNo}</li>
-                <li className="text-[11.5px] text-gray-600">Publication Date: {profile.patent.publicationDate}</li>
-              </ul>
+          <ul className="space-y-0.5 ml-3">
+            <li className="text-[12px] relative pl-3 before:content-['•'] before:absolute before:left-0 text-gray-600 leading-relaxed">
+              <span className="font-semibold text-gray-800">Patent: </span>
+              <span>{profile.patent.title} </span>
+              <span className="font-mono text-[11.5px]">
+                (<a 
+                  href="https://patents.google.com/patent/US12210855B2" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-accent hover:underline font-semibold"
+                >
+                  US12210855B2
+                </a>)
+              </span>
             </li>
             {profile.achievements.filter(a => !a.includes('Patent')).map((a, i) => (
-              <li key={i} className="text-[12px] relative pl-3 before:content-['•'] before:absolute before:left-0">
+              <li key={i} className="text-[12px] relative pl-3 before:content-['•'] before:absolute before:left-0 text-gray-600">
                 {a}
               </li>
             ))}
           </ul>
         </Section>
 
-        <Divider />
-
         {/* ── LANGUAGES ── */}
         <Section title="Languages">
           <ul className="flex gap-6 ml-3">
             {profile.languages.map((lang, i) => (
-              <li key={i} className="text-[12px] relative pl-3 before:content-['•'] before:absolute before:left-0">
+              <li key={i} className="text-[12px] relative pl-3 before:content-['•'] before:absolute before:left-0 text-gray-600">
                 {lang}
               </li>
             ))}
@@ -193,38 +188,46 @@ export default function ResumePage() {
 
       </div>
 
-      {/* Print styles */}
-      <style>{`
-        @media print {
-          @page {
-            size: A4;
-            margin: 0.6cm 0.8cm;
-          }
-          body {
-            background: white !important;
-          }
-          #resume {
-            box-shadow: none !important;
-          }
-        }
-      `}</style>
+      {/* Global CSS Print Drivers */}
+      <style>
+        {`
+            @media print {
+                @page {
+                size: A4;
+                margin: 0.4cm 0.5cm; /* Optimized padding threshold */
+                }
+                body {
+                background: white !important;
+                -webkit-print-color-adjust: exact;
+                }
+                #resume {
+                box-shadow: none !important;
+                padding-top: 0px !important;
+                padding-bottom: 0px !important;
+                }
+            }
+        `}
+      </style>
     </div>
   )
 }
 
-// ── Reusable section wrapper ──
+// ── Reusable section wrapper with an expanding horizontal line ──
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div className="mb-3">
-      <h2 className="text-[12px] font-bold uppercase tracking-[0.1em] text-[#4a4a4a] mb-2 relative">
-        {title}
-      </h2>
-      {children}
+    <div className="mb-4">
+      {/* Header flex row containing structural rule */}
+      <div className="mb-2">
+        <h2 className="text-[12px] font-bold uppercase tracking-[0.1em] text-gray-800 shrink-0 border-b border-gray-300">
+          {title}
+        </h2>
+        {/* <div className="flex-1 h-px bg-gray-300" /> */}
+      </div>
+      
+      {/* Render Box Content */}
+      <div className="pl-0.5">
+        {children}
+      </div>
     </div>
   )
-}
-
-// ── Horizontal rule matching original style ──
-function Divider() {
-  return <hr className="border-t border-gray-300 my-3" />
 }

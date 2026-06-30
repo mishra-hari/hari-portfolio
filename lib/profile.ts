@@ -7,6 +7,8 @@ export const profile = {
   location: "Pune, India",
   email: "hari.mishra.in@gmail.com",
   phone: "+91 8319245456",
+  locationPreference: "Pan India, On Site, Remote, Hybrid",
+
   links: {
     linkedin: "https://www.linkedin.com/in/hari-mishra",
     github: "https://github.com/harimishra",
@@ -21,7 +23,7 @@ export const profile = {
   experience: [
     {
       "company": "Omnicom Global Solutions (OGS)",
-      "location": "Pune, India",
+      "location": "Pune, Maharashtra, India",
       "roles": [
         {
           "title": "Associate Manager",
@@ -32,7 +34,6 @@ export const profile = {
             "Conduct technical feasibility assessments and spearhead architectural blueprints for high-scale marketing analytics platforms.",
             "Collaborate with product owners and global stakeholders to translate business requirements into technical design specifications.",
             "Orchestrate the end-to-end software development lifecycle (SDLC) from structural planning through global production deployment.",
-            "Direct the engineering of the next-generation analytics and activation engine (Omni Customization Track)."
           ]
         },
         {
@@ -41,7 +42,6 @@ export const profile = {
           "duration": "3 yrs 3 mos",
           "highlights": [
             "Architected and deployed high-performance UI ecosystems leveraging modern Web Components via Lit, Vite, and strict TypeScript.",
-            "Pioneered enterprise-wide adoption of next-gen frontend tooling, atomic configurations, and component-driven architecture.",
             "Led the end-to-end development of GeoLift Planner, an advanced geo-based experimentation platform utilizing synthetic control generation.",
             "Established a unified, shared component registry yielding 95%+ cross-platform code reusability and minimizing technical debt."
           ]
@@ -76,92 +76,102 @@ export const profile = {
     }
 ],
 
-  projects: [
-    {
-      name: "GeoLift Planner",
-      category: "OCS — Omni Customization Track",
-      description:
-        "Sophisticated platform for planning, executing, and measuring geo-based lift experiments at scale. Enables accurate measurement of incremental advertising impact using synthetic control methodology without requiring individual-level data matching.",
-      features: [
-        "Synthetic control generation",
-        "Power analysis & experiment design simulation",
-        "Statistical significance testing",
-        "Real-time reporting dashboards",
-      ],
-      tech: ["Lit", "Web Components", "Vite", "TypeScript"],
-      role: "Architected and built the core platform UI, simulation engines, and real-time reporting dashboards.",
-    },
-    {
-      name: "Agile MMM Explorer",
-      category: "OCS — Omni Customization Track",
-      description:
-        "Comprehensive Marketing Mix Modeling platform enabling data-driven budget optimization across marketing channels. Provides insights on channel contribution, ROI, diminishing returns analysis, and optimal budget allocation strategies.",
-      features: [
-        "Budget optimization & channel performance analysis",
-        "Marginal activity insights & forecasting",
-        "Portfolio planning",
-        "Unit tested with Vitest",
-      ],
-      tech: ["React", "Python", "Lit", "Web Components", "Data Visualization", "Vitest", "REST APIs"],
-      role: "Developed comprehensive MMM platform; used React + Python for core analytics, Lit Web Components for shared reusable UI.",
-    },
-    {
-      name: "Video Intelligence",
-      category: "OCS — Omni Customization Track",
-      description:
-        "ML-powered YouTube brand safety platform. Proprietary video curation tool leveraging machine learning to optimize YouTube marketing strategies across 2.85B monthly active users and 5.1B videos.",
-      features: [
-        "ML-powered channel curation",
-        "Brand safety controls",
-        "Real-time reporting & campaign insights",
-        "Flexible delivery options",
-      ],
-      tech: ["Lit", "Web Components", "ML Integration", "Real-time Analytics", "Data Visualization"],
-      role: "Built proprietary video curation platform with ML-powered brand safety controls.",
-    },
-    {
-      name: "View Builder",
-      category: "Flagship Project",
-      description:
-        "Revolutionary low-code/no-code platform enabling users to create and publish application views without writing code. Features JSON-based configuration, real-time validation, theme customization, and instant deployment. Reduced development time by 70%.",
-      features: [
-        "JSON-based configuration engine",
-        "Real-time validation & theme customization",
-        "Instant deployment — 70% dev time reduction",
-        "Zero code deployment for end users",
-      ],
-      tech: ["Angular", "Micro Frontend", "NX", "Webpack", "Module Federation"],
-      role: "Module Lead — spearheaded runtime engine and validation layer.",
-    },
-    {
-      name: "SiteFORGE",
-      category: "Flagship Project",
-      description:
-        "Enterprise process automation platform with integrated modules for inventory management, logistics, project management, and work order tracking. Supports web, mobile, and tablet deployments with role-based access control and real-time dashboards. Serves 50,000+ active users.",
-      features: [
-        "Inventory, logistics & work order management",
-        "Role-based access control",
-        "Real-time dashboards",
-        "Web, mobile & tablet support — 50,000+ users",
-      ],
-      tech: ["JavaScript", "AngularJS", "Highcharts", "Leaflet Maps", "Google Maps"],
-      role: "Front-end Developer — optimized cross-device layouts and UI performance.",
-    },
-    {
-      name: "TradeRoar",
-      category: "Flagship Project",
-      description:
-        "Innovative fully-integrated stock trading platform with advanced features including strategy builder, backtesting tools, and automated trading execution. Enables traders and investors to analyze market trends, build strategies, and execute trades profitably.",
-      features: [
-        "Strategy builder & backtesting tools",
-        "Automated trading execution",
-        "Market trend analysis",
-        "Multi-security support",
-      ],
-      tech: ["JavaScript", "AngularJS", "Highcharts", "Advanced Data Visualization"],
-      role: "Senior Front-end Developer & Team Lead.",
-    },
-  ],
+  projects:[
+  // ── TOP 4 RESUME PROJECTS (HIGH IMPACT) ──
+  {
+    name: "GeoLift Planner",
+    category: "Enterprise Data Architecture Platforms", // Combined OCS/Flagship into high-impact naming
+    showOnResume: true,
+    description:
+      "Sophisticated platform for planning, executing, and measuring geo-based lift experiments at scale. Enables accurate measurement of incremental advertising impact using synthetic control methodology without requiring individual-level data matching.",
+    features: [
+      "Synthetic control generation",
+      "Power analysis & experiment design simulation",
+      "Statistical significance testing",
+      "Real-time reporting dashboards",
+    ],
+    tech: ["Lit", "Web Components", "Vite", "TypeScript"],
+    role: "Architected and built the core platform UI, simulation engines, and real-time reporting dashboards.",
+  },
+  {
+    name: "Agile MMM Explorer",
+    category: "Enterprise Data Architecture Platforms",
+    showOnResume: true,
+    description:
+      "Comprehensive Marketing Mix Modeling platform enabling data-driven budget optimization across marketing channels. Provides insights on channel contribution, ROI, diminishing returns analysis, and optimal budget allocation strategies.",
+    features: [
+      "Budget optimization & channel performance analysis",
+      "Marginal activity insights & forecasting",
+      "Portfolio planning",
+      "Unit tested with Vitest",
+    ],
+    tech: ["React", "Python", "Lit", "Web Components", "Data Visualization", "Vitest", "REST APIs"],
+    role: "Developed comprehensive MMM platform; used React + Python for core analytics, Lit Web Components for shared reusable UI.",
+  },
+  {
+    name: "View Builder",
+    category: "Next-Gen Frameworks & Low-Code Systems",
+    showOnResume: true,
+    description:
+      "Revolutionary low-code/no-code platform enabling users to create and publish application views without writing code. Features JSON-based configuration, real-time validation, theme customization, and instant deployment. Reduced development time by 70%.",
+    features: [
+      "JSON-based configuration engine",
+      "Real-time validation & theme customization",
+      "Instant deployment — 70% dev time reduction",
+      "Zero code deployment for end users",
+    ],
+    tech: ["Angular", "Micro Frontend", "NX", "Webpack", "Module Federation"],
+    role: "Module Lead — spearheaded runtime engine and validation layer.",
+  },
+  {
+    name: "SiteFORGE",
+    category: "Next-Gen Frameworks & Low-Code Systems",
+    showOnResume: true,
+    description:
+      "Enterprise process automation platform with integrated modules for inventory management, logistics, project management, and work order tracking. Supports web, mobile, and tablet deployments with role-based access control and real-time dashboards.",
+    features: [
+      "Inventory, logistics & work order management",
+      "Role-based access control",
+      "Real-time dashboards",
+      "Web, mobile & tablet support — 50,000+ users",
+    ],
+    tech: ["JavaScript", "AngularJS", "Highcharts", "Leaflet Maps", "Google Maps"],
+    role: "Front-end Developer — optimized cross-device layouts and UI performance.",
+  },
+
+  // ── ADDITIONAL PORTFOLIO PROJECTS (HIDDEN ON RESUME) ──
+  {
+    name: "Video Intelligence",
+    category: "Core Automation Products",
+    showOnResume: false,
+    description:
+      "ML-powered YouTube brand safety platform. Proprietary video curation tool leveraging machine learning to optimize YouTube marketing strategies across 2.85B monthly active users and 5.1B videos.",
+    features: [
+      "ML-powered channel curation",
+      "Brand safety controls",
+      "Real-time reporting & campaign insights",
+      "Flexible delivery options",
+    ],
+    tech: ["Lit", "Web Components", "ML Integration", "Real-time Analytics", "Data Visualization"],
+    role: "Built proprietary video curation platform with ML-powered brand safety controls.",
+  },
+  {
+    name: "TradeRoar",
+    category: "Core Automation Products",
+    showOnResume: false,
+    description:
+      "Innovative fully-integrated stock trading platform with advanced features including strategy builder, backtesting tools, and automated trading execution. Enables traders and investors to analyze market trends, build strategies, and execute trades profitably.",
+    features: [
+      "Strategy builder & backtesting tools",
+      "Automated trading execution",
+      "Market trend analysis",
+      "Multi-security support",
+    ],
+    tech: ["JavaScript", "AngularJS", "Highcharts", "Advanced Data Visualization"],
+    role: "Senior Front-end Developer & Team Lead.",
+  }
+]
+,
 
   skills: {
     "Frontend Architecture & Patterns": [
@@ -239,7 +249,7 @@ export const profile = {
   },
 
   education: {
-    institution: "Gyan Ganga Institute of Technologies & Sciences, Jabalpur",
+    institution: "Gyan Ganga Institute of Technology and Sciences, Jabalpur",
     affiliation: "RGPV State University, Madhya Pradesh",
     degree: "Bachelor of Engineering in Information Technology",
     period: "2010 – 2014",

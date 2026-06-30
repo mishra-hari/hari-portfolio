@@ -2,8 +2,9 @@ import { profile } from '@/lib/profile'
 import { SectionLabel } from './Experience'
 
 const categoryOrder = [
-  'OCS — Omni Customization Track',
-  'Flagship Project',
+  'Enterprise Data Architecture Platforms',
+  'Next-Gen Frameworks & Low-Code Systems',
+  'Core Automation Products'
 ]
 
 export default function Projects() {
