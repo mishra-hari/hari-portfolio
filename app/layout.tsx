@@ -17,10 +17,6 @@ export const metadata: Metadata = {
     siteName: 'Hari Mishra Portfolio',
     type: 'website',
   },
-  icons: {
-    icon: '/favicon.png',
-    apple: '/favicon.png',
-  },
 }
 
 export default function RootLayout({

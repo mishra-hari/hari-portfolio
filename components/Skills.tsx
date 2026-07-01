@@ -1,7 +1,7 @@
-import { profile } from '@/lib/profile'
 import { SectionLabel } from './Experience'
+import { UserProfile } from '@/types/profile'
 
-export default function Skills() {
+export default function Skills({ profile }: { profile: UserProfile }) {
   return (
     <section id="skills" className="py-24 max-w-5xl mx-auto px-6">
       <SectionLabel label="Expertise" />
@@ -19,7 +19,7 @@ export default function Skills() {
               {category}
             </h3>
             <div className="flex flex-wrap gap-2">
-              {items.map((skill) => (
+              {items.map((skill: any) => (
                 <span
                   key={skill}
                   className="text-xs px-2.5 py-1 rounded-md bg-subtle text-zinc-300 border border-border hover:border-accent/40 hover:text-white transition-colors cursor-default"

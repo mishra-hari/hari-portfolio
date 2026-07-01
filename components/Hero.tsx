@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { profile } from '@/lib/profile'
 
 const roles = [
   'Frontend Architect',
@@ -11,7 +10,7 @@ const roles = [
   'UI Systems Designer',
 ]
 
-export default function Hero() {
+export default function Hero({ profile }: { profile: any }) {
   const [roleIndex, setRoleIndex] = useState(0)
   const [displayed, setDisplayed] = useState('')
   const [deleting, setDeleting] = useState(false)

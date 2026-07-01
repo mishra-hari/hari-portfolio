@@ -1,6 +1,6 @@
-import { profile } from '@/lib/profile'
+import { UserProfile } from '@/types/profile'
 
-export default function Experience() {
+export default function Experience({ profile }: { profile: UserProfile }) {
   return (
     <section id="experience" className="py-24 max-w-5xl mx-auto px-6">
       <SectionLabel label="Career" />
