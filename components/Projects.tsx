@@ -1,5 +1,5 @@
-import { profile } from '@/lib/profile'
 import { SectionLabel } from './Experience'
+import { UserProfile } from '@/types/profile'
 
 const categoryOrder = [
   'Enterprise Data Architecture Platforms',
@@ -7,7 +7,7 @@ const categoryOrder = [
   'Core Automation Products'
 ]
 
-export default function Projects() {
+export default function Projects({ profile }: { profile: UserProfile }) {
   const grouped = categoryOrder.map((cat) => ({
     category: cat,
     items: profile.projects.filter((p) => p.category === cat),

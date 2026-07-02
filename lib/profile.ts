@@ -1,7 +1,9 @@
-export const profile = {
-  name: "Hari Prapanna Mishra",
+import { UserProfile } from "@/types/profile";
+
+export const profile: UserProfile = {
+  name: "Hari Prapanna Mishra11",
   highLights: "Available for new opportunities",
-  shortName: "Hari Mishra",
+  shortName: "Hari Mishra11",
   title: "Associate Manager & Frontend Architect",
   tagline: "11+ years building enterprise-scale web applications",
   location: "Pune, India",
@@ -74,7 +76,7 @@ export const profile = {
         }
       ]
     }
-],
+  ],
 
   projects:[
   // ── TOP 4 RESUME PROJECTS (HIGH IMPACT) ──
@@ -170,8 +172,7 @@ export const profile = {
     tech: ["JavaScript", "AngularJS", "Highcharts", "Advanced Data Visualization"],
     role: "Senior Front-end Developer & Team Lead.",
   }
-]
-,
+  ],
 
   skills: {
     "Frontend Architecture & Patterns": [

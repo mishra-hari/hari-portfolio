@@ -1,7 +1,7 @@
-import { profile } from '@/lib/profile'
 import { SectionLabel } from './Experience'
+import { UserProfile } from '@/types/profile'
 
-export default function Contact() {
+export default function Contact({ profile }: { profile: UserProfile }) {
   return (
     <section id="contact" className="py-24 border-t border-border bg-card/20">
       <div className="max-w-5xl mx-auto px-6">
