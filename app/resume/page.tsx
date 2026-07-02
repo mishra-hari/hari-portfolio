@@ -2,13 +2,16 @@ import { getProfile } from '@/lib/getProfile'
 import PrintButton from './PrintButton'
 import { UserProfile } from '@/types/profile'
 
-const profile: UserProfile = await getProfile() // Fetch profile data from MongoDB or fallback to static data
-export const metadata = {
-  title: `${profile.name} — Resume`,
+export async function generateMetadata() {
+  const profile: UserProfile = await getProfile()
+  return {
+    title: `${profile.name} — Resume`,
+    description: `Resume of ${profile.name}, ${profile.title}`,
+  }
 }
 
 export default async function ResumePage() {
-  
+  const profile: UserProfile = await getProfile()
   return (
     <div className="bg-gray-100 min-h-screen py-8 print:bg-white print:p-0 print:m-0">
 
