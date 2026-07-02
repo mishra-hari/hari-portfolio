@@ -8,6 +8,8 @@ import Contact from '@/components/Contact'
 import ChatWidget from '@/components/ChatWidget'
 import { UserProfile } from '@/types/profile'
 
+export const dynamic = 'force-dynamic' 
+
 export default async function Home() {
   const profile: any | UserProfile = await getProfile() // Fetch profile data from MongoDB or fallback to static data
   return (

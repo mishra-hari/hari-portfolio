@@ -2,6 +2,8 @@ import { getProfile } from '@/lib/getProfile'
 import PrintButton from './PrintButton'
 import { UserProfile } from '@/types/profile'
 
+export const dynamic = 'force-dynamic' 
+
 export async function generateMetadata() {
   const profile: UserProfile = await getProfile()
   return {
