@@ -3,6 +3,9 @@ import { getProfile } from '@/lib/getProfile'
 import clientPromise from '@/lib/mongodb'
 import { NextRequest, NextResponse } from 'next/server'
 
+//Forces route runtime to stay dynamic so PUT method executes
+export const dynamic = 'force-dynamic' 
+
 export async function GET() {
   const profile = await getProfile()
   return NextResponse.json(profile)
